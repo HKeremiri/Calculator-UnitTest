@@ -1,11 +1,15 @@
-namespace Calculator
+using Domain;
+
+namespace CalculatorTest
 {
     public class UnitTest1
     {
+      
         [Fact]
         public void Test1()
         {
-            if(sum(1, 2) == 3)
+            var calculator = new Calculator();
+            if (calculator.sum(1, 2) == 3)
             {
                 Console.WriteLine("Test Passed");
             }
@@ -18,8 +22,10 @@ namespace Calculator
         [Fact]
         public void Test2()
         {
-      
-            if (divide(4, 2) == 2)
+            // Hatalý test denemesi
+
+      var calculator = new Calculator();
+            if (calculator.divide(4, 2) == 2)
             {
                 Console.WriteLine("Test Passed");
             }
@@ -29,13 +35,6 @@ namespace Calculator
             }
         }
 
-        int sum(int a, int b)
-        {
-            return a + b;
-        }
-        int divide(int a, int b)
-        {
-            return a * b;
-        }
+    
     }
 }
